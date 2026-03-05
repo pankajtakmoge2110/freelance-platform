@@ -1,10 +1,9 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://freelance-platform-rdkq.onrender.com/api",
 });
 
-// Attach token to every request automatically
 API.interceptors.request.use((req) => {
   const token = localStorage.getItem("token");
   if (token) {
